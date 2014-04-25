@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('handsonApp', [
+  .module('swFrontApp', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
@@ -10,8 +10,11 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/main.html'
+      })
+      .when('/edges',{
+        templateUrl: 'views/edges.html',
+        controller: 'EdgesController'
       })
       .otherwise({
         redirectTo: '/'
